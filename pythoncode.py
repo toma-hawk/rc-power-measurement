@@ -11,7 +11,7 @@ while True:
         data_split=ser_bytes.split(",")
         with open("test_data.csv","a") as f:
             writer = csv.writer(f,delimiter=",")
-            writer.writerow([time.asctime(),data_split[0],data_split[1][0:len(data_split[1])-2]])
+            writer.writerow([time.time(),data_split[0],data_split[1][0:len(data_split[1])-2]])
     except:
         print("Keyboard Interrupt")
         break
