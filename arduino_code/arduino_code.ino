@@ -23,15 +23,16 @@ void loop()
   /*reading sensor inputs */
   v_read=analogRead(A1);
   i_read=analogRead(A4);
-  Serial.println("analog read:");
-  Serial.println(v_read);
-  Serial.println(i_read);
+  //Serial.println("analog read:");
+  //Serial.println(v_read);
+  //Serial.println(i_read);
   /* Calculating the voltage and current measured */
   volt=v_read*((float)5/(1023 * 0.06369));
   amps=i_read*((float)5/(1023 * 0.03660));
 
-  Serial.println(volt);
-  Serial.println(amps);
+  Serial.print(volt);
+  Serial.print(",");
+  Serial.print(amps);
   Serial.println();
   delay(500);
 }
